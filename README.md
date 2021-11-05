@@ -13,7 +13,19 @@ Este metodo introduce a la base de datos un elemento tipo pelicula con sus respe
 
 1. **Endpoint:**
 2. **Método:** ```POST```
-3. **Body:**
+3. **Body:** 
+
+```
+{
+    "titulo": "Mexico Magico y Tragico",
+    "año": "2042",
+    "director": "Mario Quintanilla",
+    "duracion": "1:35",
+    "clasificacion": "R-15"
+}
+
+```
+
 4. **Validaciones:**
 5. **Errores:**
 
@@ -29,6 +41,16 @@ Este metodo introduce a la base de datos un elemento tipo museo con sus respecti
 1. **Endpoint:**
 2. **Método:** ```POST```
 3. **Body:**
+
+```
+{
+    "nombre": "Museo Mágico",
+    "ubicacion": "San martin de hipocampo",
+    "categoria": "Gratuito",
+    "descripcion": "Museo de artes misticas"
+}
+```
+
 4. **Validaciones:**
 5. **Errores:**
 
