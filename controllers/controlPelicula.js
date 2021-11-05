@@ -32,6 +32,7 @@ exports.getReadPelicula = (req, res) => {
 
     //despliega todos
     Pelicula.find().then(resultado => {
+        console.log(resultado)
         //Que quieres que haga con ese resultado
     })
 
@@ -41,9 +42,9 @@ exports.postUpdatePelicula = async (req, res) => {
     console.log(req.body)
 
     try {
-        await Pelicula.find(req.body).then(resultado =>{
-            if (resultado != 0 && resultado != null){
-                Pelicula.findOneAndUpdate(req.body)
+        await Pelicula.findById(req.body._id).then(resultado =>{
+            if (resultado != 0 || resultado != null){
+                Pelicula.findByIdAndUpdate(req.body._id, req.body)
                 //Mensaje de este item fue actualizado
             } else {
                 //Mensaje de este item NO FUE ENCONTRADO
@@ -59,9 +60,9 @@ exports.postDeletePelicula = async (req, res) => {
     console.log(req.body)
 
     try {
-        await Pelicula.find(req.body).then(resultado =>{
-            if (resultado != 0 && resultado != null){
-                Pelicula.findOneAndDelete(req.body)
+        await Pelicula.findById(req.body._id).then(resultado =>{
+            if (resultado != 0 || resultado != null){
+                Pelicula.findOneAndDelete(resultado)
                 //Mensaje de este item fue eliminado
             } else {
                 //Mensaje de este item NO FUE ENCONTRADO

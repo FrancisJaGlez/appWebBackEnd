@@ -4,6 +4,6 @@ const controladorPelicula = require("../controllers/controlPelicula")
 router.post("/agregarPelicula", controladorPelicula.postCreatePelicula)
 router.get("/mostrarPeliculas", controladorPelicula.getReadPelicula)
 router.post("/actualizarPelicula", controladorPelicula.postUpdatePelicula)
-router.delete("/borrarPelicula", controladorPelicula.postDeletePelicula)
+router.post("/borrarPelicula", controladorPelicula.postDeletePelicula)
 
 module.exports = router

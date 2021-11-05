@@ -32,19 +32,19 @@ exports.postCreateMuseo = async (req, res) => {
 exports.getReadMuseo = (req, res) => {
 
 
-    Pelicula.find().then(resultado => {
-        //Que quieres que haga con ese resultado
+    Museo.find().then(resultado => {
+        console.log(resultado)
     })
 
 }
 
 exports.postUpdateMuseo = async (req, res) => {
-    console.log(req.body)
+    console.log(req.body._id)
 
     try {
-        await Museo.find(req.body).then(resultado =>{
-            if (resultado != 0 && resultado != null){
-                Museo.findOneAndUpdate(req.body)
+        await Museo.find(req.body._id).then(resultado =>{
+            if (resultado != 0 || resultado != null){
+                Museo.findByIdAndUpdate(req.body._id, req.body)
                 //Mensaje de este item fue actualizado
             } else {
                 //Mensaje de este item NO FUE ENCONTRADO
@@ -57,19 +57,23 @@ exports.postUpdateMuseo = async (req, res) => {
 }
 
 exports.postDeleteMuseo = async (req, res) => {
-    console.log(req.body)
+    //console.log(req.body._id)
 
     try {
-        await Museo.find(req.body).then(resultado =>{
-            if (resultado != 0 && resultado != null){
-                Museo.findOneAndDelete(req.body)
+        await Museo.findById(req.body._id).then(resultado =>{
+            console.log(resultado)
+            if (resultado != 0 || resultado != null){
+                 Museo.findOneAndRemove(resultado)
                 //Mensaje de este item fue eliminado
+                console.log("Museo eliminado")
             } else {
                 //Mensaje de este item NO FUE ENCONTRADO
+                console.log("Museo no encontrado")
             }
         })
     }catch(error){
         //mensaje de error de catch
+        console.log(error)
     }
 
 }
