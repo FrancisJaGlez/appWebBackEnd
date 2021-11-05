@@ -11,7 +11,7 @@ Este metodo introduce a la base de datos un elemento tipo pelicula con sus respe
 
 #### NOTA: todos los campos NO deben estar vacios.
 
-1. **Endpoint:**
+1. **Endpoint:** ```/peliculas/agregarPelicula```
 2. **Método:** ```POST```
 3. **Body:** 
 
@@ -23,7 +23,6 @@ Este metodo introduce a la base de datos un elemento tipo pelicula con sus respe
     "duracion": "1:35",
     "clasificacion": "R-15"
 }
-
 ```
 
 4. **Validaciones:**
@@ -38,7 +37,7 @@ Este metodo introduce a la base de datos un elemento tipo museo con sus respecti
 
 #### NOTA: todos los campos NO deben estar vacios.
 
-1. **Endpoint:**
+1. **Endpoint:** ```/museos/agregarMuseo```
 2. **Método:** ```POST```
 3. **Body:**
 
@@ -56,9 +55,9 @@ Este metodo introduce a la base de datos un elemento tipo museo con sus respecti
 
 ## 2. Mostrar elemento de la base de datos
 
-Este metodo despliega todos los elementos registrados en la base de datos.
+Este metodo despliega todos las peliculas registradas en la base de datos.
 
-1. **Endpoint:**
+1. **Endpoint:** ```/peliculas/mostrarPeliculas``` **o** ```/museos/mostrarMuseos```
 2. **Método:** ```GET```
 3. **Body:**
 4. **Validaciones:**
@@ -75,7 +74,7 @@ Este metodo actualiza en la base de datos un elemento tipo pelicula con datos:
 
 #### Este metodo busca el elemento recibido con los datos anteriores.
 
-1. **Endpoint:**
+1. **Endpoint:** ```/peliculas/actualizarPelicula```
 2. **Método:** ```POST```
 3. **Body:**
 4. **Validaciones:**
@@ -90,7 +89,7 @@ Este metodo introduce en la base de datos un elemento tipo museo con sus respect
 
 #### Este metodo busca el elemento recibido con los datos anteriores.
 
-1. **Endpoint:**
+1. **Endpoint:** ```/museos/actualizarMuseo```
 2. **Método:** ```POST```
 3. **Body:**
 4. **Validaciones:**
@@ -108,7 +107,7 @@ Este metodo actualiza en la base de datos un elemento tipo pelicula con datos:
 
 #### Este metodo busca el elemento recibido con los datos anteriores.
 
-1. **Endpoint:**
+1. **Endpoint:** ```/peliculas/borrarPelicula```
 2. **Método:** ```DELETE```
 3. **Body:**
 4. **Validaciones:**
@@ -123,7 +122,7 @@ Este metodo introduce en la base de datos un elemento tipo museo con sus respect
 
 #### Este metodo busca el elemento recibido con los datos anteriores.
 
-1. **Endpoint:**
+1. **Endpoint:** ```/museos/borrarMuseo```
 2. **Método:** ```DELETE```
 3. **Body:**
 4. **Validaciones:**
